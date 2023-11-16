@@ -76,3 +76,18 @@ function ic(pcc)
 end
 
 # the result of the ic function is the same as the upci function
+
+# Collections
+# -----------
+
+function wt(type)
+	return collect(type:2:11)
+end
+
+# Whole Tone Collection 0 WT0
+# julia> println(wt(0))
+# [0, 2, 4, 6, 8, 10]
+
+# Whole Tone Collection 1 WT1
+# julia> println(wt(1))
+# [1, 3, 5, 7, 9, 11]
