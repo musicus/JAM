@@ -95,14 +95,14 @@ end
 # Octatonic Collection
 # --------------------
 
-function oct(oh,one)
-	if(oh==2 && one==3)
-		oh=0 
-		one=2
-	end 
-	return sort([collect(oh:3:11);collect(one:3:11)])
+function oct(x,y)
+	z = vcat(collect(x:3:24), collect(y:3:24)) 
+	return sort(union([z[x] % 12 for x in eachindex(z)]))
 end
 
 # OCT collections possible 0,1; 1,2; 2,3
 # julia> print(oct(0,1))
 # [0, 1, 3, 4, 6, 7, 9, 10]
+
+
+
