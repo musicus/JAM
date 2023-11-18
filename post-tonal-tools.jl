@@ -92,3 +92,17 @@ end
 # julia> print(wt(1))
 # [1, 3, 5, 7, 9, 11]
 
+# Octatonic Collection
+# --------------------
+
+function oct(oh,one)
+	if(oh==2 && one==3)
+		oh=0 
+		one=2
+	end 
+	return sort([collect(oh:3:11);collect(one:3:11)])
+end
+
+# OCT collections possible 0,1; 1,2; 2,3
+# julia> print(oct(0,1))
+# [0, 1, 3, 4, 6, 7, 9, 10]
