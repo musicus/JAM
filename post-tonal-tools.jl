@@ -103,6 +103,14 @@ end
 # OCT collections possible 0,1; 1,2; 2,3
 # julia> print(oct(0,1))
 # [0, 1, 3, 4, 6, 7, 9, 10]
+# OCT1,2
+# julia> println(oct(1,2))
+# [1, 2, 4, 5, 7, 8, 10, 11]
+# OCT2,3
+# julia> println(oct(2,3))
+# [0, 2, 3, 5, 6, 8, 9, 11]
+
+
 
 
 
