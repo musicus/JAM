@@ -172,19 +172,19 @@ end
 """
     ic(pcc)
 
-	Create Interval Classes (IC) from a pitch class collection (pcc).
-	The OPCI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Music, 4th Edition." 
+Create Interval Classes (IC) from a pitch class collection (pcc).
+The OPCI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Music, 4th Edition." 
 	
-	# Examples
-	```jldoctest
+# Examples
+```jldoctest
 	
-	julia> show(mel_seq)
-	[64, 62, 60, 62, 52, 76, 64]
+julia> show(mel_seq)
+[64, 62, 60, 62, 52, 76, 64]
 	
-	julia> println(ic(mel_seq))
-	[2, 2, 2, 2, 0, 0]
+julia> println(ic(mel_seq))
+[2, 2, 2, 2, 0, 0]
 	
-	```
+```
 """
 function ic(pcc)
 	return upci(pcc)
