@@ -77,58 +77,6 @@ end
 
 # the result of the ic function is the same as the upci function
 
-# Collections
-# -----------
-
-function wt(pc)
-	return collect(pc:2:11)
-end
-
-# Whole Tone Collection starting on Pitch Class 0 (WT0)
-# julia> print(wt(0))
-# [0, 2, 4, 6, 8, 10]
-
-# Whole Tone Collection starting on Pitch Class 1 (WT1)
-# julia> print(wt(1))
-# [1, 3, 5, 7, 9, 11]
-
-# Octatonic Collection
-# --------------------
-
-function oct(x,y)
-	z = vcat(collect(x:3:24), collect(y:3:24)) 
-	return sort(union([z[x] % 12 for x in eachindex(z)]))
-end
-
-# OCT collections possible 0,1; 1,2; 2,3
-# julia> print(oct(0,1))
-# [0, 1, 3, 4, 6, 7, 9, 10]
-# OCT1,2
-# julia> println(oct(1,2))
-# [1, 2, 4, 5, 7, 8, 10, 11]
-# OCT2,3
-# julia> println(oct(2,3))
-# [0, 2, 3, 5, 6, 8, 9, 11]
-
-function rec_oct(x=0,i=1,a=[])
-
-	pcs = append!(a,x)
-
-	if x == 24
-		return
-	else
-		if i == 1
-			rec_oct(x+i,2,pcs)
-		else 
-			rec_oct(x+i,1,pcs)
-		end
-	end
-
-	modded = [x % 12 for x in pcs]
-	return modded
-
-end
-
 # Collections or Scales measured by intervals
 # -------------------------------------------
 
