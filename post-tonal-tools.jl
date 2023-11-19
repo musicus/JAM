@@ -110,7 +110,64 @@ end
 # julia> println(oct(2,3))
 # [0, 2, 3, 5, 6, 8, 9, 11]
 
+function rec_oct(x=0,i=1,a=[])
 
+	pcs = append!(a,x)
 
+	if x == 24
+		return
+	else
+		if i == 1
+			rec_oct(x+i,2,pcs)
+		else 
+			rec_oct(x+i,1,pcs)
+		end
+	end
 
+	modded = [x % 12 for x in pcs]
+	return modded
 
+end
+
+# Collections or Scales measured by intervals
+# -------------------------------------------
+
+ionian = [2,2,1,2,2,2,1]     # ionian mode / major mode
+dorian = [2,1,2,2,2,1,2]     # dorian mode (minor)
+phrygian = [1,2,2,2,1,2,2]   # phrygian mode (minor)
+lydian = [2,2,2,1,2,2,1]     # lydian mode (major)
+mixolydian = [2,2,1,2,2,1,2] # mixolydian mode (major)
+aeolian = [2,1,2,2,1,2,2]    # aeolian mode (minor)
+locrian = [1,2,2,1,2,2,2]    # locrian mode (minor)
+melodic = [2,1,2,2,2,2,1]    # melodic minor
+harmonic = [2,1,2,2,1,3,1]   # melodic minor
+prem = [2,2,2,2,2]           # whole tone
+deux_12 = [1,2,1,2,1,2,1]    # oct 1–2 ordering
+deux_21 = [2,1,2,1,2,1,2]    # oct 2-1 ordering
+troi = [2,1,1,2,1,1,2,1,1]   # Messiaen's third mode of limited transposition
+quat = [1,1,3,1,1,1,3,1]     # Messiaen's fourth mode of limited transposition
+cinq = [1,4,1,1,4,1]         # Messiaen's sixth mode of limited transposition
+sixe = [2,2,1,1,2,2,1,1]     # Messiaen's sixth mode of limited transposition
+sept = [1,1,1,2,1,1,1,1,2,1] # Messiae's sixth mode of limited transpostion
+hex_13 = [1,3,1,3,1]         # hex 1-3 ordering
+hex_31 = [3,1,3,1,3]         # hex 3-1 ordering
+
+# Building a scale. First argument is the starting PC, second argument is the scale type.
+# The scale types are defined through their adjacent interval series
+
+function scales(s=0,ntvls=[2,2,1,2,2,2,1])
+
+    pcs=[]
+    pc = append!(pcs,s)   
+    [append!(pcs,(ntvls[i]+pc[i]) % 12) for i in eachindex(ntvls)]
+    return pcs
+
+end
+
+# The default scale is C Major
+# julia> println(scales())
+# Any[0, 2, 4, 5, 7, 9, 11, 0]
+
+# Hexatonic scale starting on PC 2 in 1–3 ordering
+# julia> println(scales(2,hex_31))
+# Any[2, 5, 6, 9, 10, 1]
