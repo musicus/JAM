@@ -243,7 +243,14 @@ end
 """
 	pc_names
 
-A matrix of equivalent pitch class names; so far represented in Integers, traditional, German, and solfège.
+A matrix of equivalent pitch class names: 
+
+- Integers
+- English
+- Solfège
+- German/Hungarian/Polish/Slovak/Slovenian/Estonian/Danish/Czech
+- Dutch
+- Norwegian/Swedish
 
 # Examples
 ```jldoctest
@@ -260,15 +267,15 @@ julia> println([pc_names[i+1,3] for i in c_minor])
 
 ```
 """
-pc_names = [0 "C" "do" "C";
-    1 "C#" "di" "Cis";
-    2 "D" "re" "D";
-    3 "Eb" "me" "Es";
-    4 "E" "mi" "E";
-    5 "F" "fa" "F";
-    6 "F#" "fi" "Fis";
-    7 "G" "sol" "G";
-    8 "Ab" "le" "As";
-    9 "A" "la" "A";
-    10 "Bb" "te" "B";
-    11 "B" "do" "H";]
+pc_names = [0 "C" "do" "C" "C" "C";
+    1 "C#" "di" "Cis" "Cis" "Ciss";
+    2 "D" "re" "D" "D" "D";
+    3 "Eb" "me" "Es" "Es" "Ess";
+    4 "E" "mi" "E" "E" "E";
+    5 "F" "fa" "F" "F" "F";
+    6 "F#" "fi" "Fis" "Fis" "Fiss";
+    7 "G" "sol" "G" "G" "G";
+    8 "Ab" "le" "As" "As" "Ass";
+    9 "A" "la" "A" "A" "A";
+    10 "Bb" "te" "B" "Bes" "Bess";
+    11 "B" "do" "H" "B" "H";]
