@@ -6,8 +6,8 @@
 # ======= 
 
 # Test Pitch Class Collections
-mel_seq = [64, 62, 60, 62, 52, 76, 64]
-fr_Aug6 = [0,2,6,8]
+# mel_seq = [64, 62, 60, 62, 52, 76, 64]
+# fr_Aug6 = [0,2,6,8]
 
 """
     midi_to_pc(pcc)
