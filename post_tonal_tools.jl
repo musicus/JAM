@@ -6,8 +6,8 @@
 # ======= 
 
 # Test Pitch Class Collections
-# mel_seq = [64, 62, 60, 62, 52, 76, 64]
-# fr_Aug6 = [0,2,6,8]
+mel_seq = [64, 62, 60, 62, 52, 76, 64]
+fr_Aug6 = [0, 2, 6, 8]
 
 """
     midi_to_pc(pcc)
@@ -28,7 +28,7 @@ julia> mel_seq = [64, 62, 60, 62, 52, 76, 64]
  76
  64
 
- # Running the midi_to_pc function and printing its results.
+# Running the midi_to_pc function and printing its results.
 julia> println(midi_to_pc(mel_seq))
 [4, 2, 0, 2, 4, 4, 4]
 
@@ -137,11 +137,6 @@ julia> println(opci(mel_seq))
 function opci(pcc)
 	return [i < 0 ? i+12 : i for i ∈ [(pcc[i+1] - pcc[i]) % 12 for i ∈ eachindex(pcc) if i < length(pcc)]]
 end
-
-# mel_seq = [64, 62, 60, 62, 52, 76, 64];
-# julia> println(opci(mel_seq))
-# [10, 10, 2, 2, 0, 0]
-
 # Unordered Pitch Class Intervals and Interval Classes
 # ----------------------------------------------------
 
