@@ -35,7 +35,7 @@ julia> println(midi_to_pc(mel_seq))
 ```
 """
 function midi_to_pc(pcc)
-	return [i % 12 for i in pcc]
+	return [i % 12 for i ∈ pcc]
 end
 
 # Intervals
@@ -63,7 +63,7 @@ julia> println(opi(mel_seq))
 ``` 
 """
 function opi(pcc)
-	return [pcc[i+1] - pcc[i] for i in eachindex(pcc) if i < length(pcc)]
+	return [pcc[i+1] - pcc[i] for i ∈ eachindex(pcc) if i < length(pcc)]
 end
 
 """
@@ -110,7 +110,7 @@ julia> println(upi(mel_seq))
 ```
 """
 function upi(pcc)
-	return [abs(pcc[i+1] - pcc[i]) for i in eachindex(pcc) if i < length(pcc)]
+	return [abs(pcc[i+1] - pcc[i]) for i ∈ eachindex(pcc) if i < length(pcc)]
 end
 
 # Ordered Pitch Class Intervals
@@ -135,7 +135,7 @@ julia> println(opci(mel_seq))
 ```
 """
 function opci(pcc)
-	return [i < 0 ? i+12 : i for i in [(pcc[i+1] - pcc[i]) % 12 for i in eachindex(pcc) if i < length(pcc)]]
+	return [i < 0 ? i+12 : i for i ∈ [(pcc[i+1] - pcc[i]) % 12 for i ∈ eachindex(pcc) if i < length(pcc)]]
 end
 
 # mel_seq = [64, 62, 60, 62, 52, 76, 64];
@@ -163,9 +163,9 @@ julia> println(upci(mel_seq))
 ```
 """
 function upci(pcc)
-	x = [i < 0 ? i+12 : i for i in [(pcc[i+1] - pcc[i]) % 12 for i in eachindex(pcc) if i < length(pcc)]]
-	y = [i < 0 ? i+12 : i for i in [(pcc[i] - pcc[i+1]) % 12 for i in eachindex(pcc) if i < length(pcc)]]
-	ic = [i[1] < i[2] ? i[1] : i[2] for i in zip(x,y)]
+	x = [i < 0 ? i+12 : i for i ∈ [(pcc[i+1] - pcc[i]) % 12 for i ∈ eachindex(pcc) if i < length(pcc)]]
+	y = [i < 0 ? i+12 : i for i ∈ [(pcc[i] - pcc[i+1]) % 12 for i ∈ eachindex(pcc) if i < length(pcc)]]
+	ic = [i[1] < i[2] ? i[1] : i[2] for i ∈ zip(x,y)]
 	return ic
 end
 
@@ -231,10 +231,10 @@ Any[2, 5, 6, 9, 10, 1]
 
 ```
 """
-function scales(s=0,intervals=[2,2,1,2,2,2,1])
-	pcs=[]
-    pc = append!(pcs,s)   
-    [append!(pcs,(intervals[i]+pc[i]) % 12) for i in eachindex(intervals)]
+function scales(pc=0,intervals=[2,2,1,2,2,2,1])
+	pcs = Vector{Int64}()
+    pcc = push!(pcs,pc)   
+    [append!(pcs,(intervals[i]+pcc[i]) % 12) for i ∈ eachindex(intervals)]
     return pcs
 end
 
@@ -255,7 +255,7 @@ A matrix of equivalent pitch class names:
 # Examples
 ```jldoctest
 
-# An example of using the scales function and pc_names matrix to create readable scale names
+# Using the scales function and pc_names matrix to create readable scale names
 # Building a c minor scale
 
 julia> show(c_minor)
