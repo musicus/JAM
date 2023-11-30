@@ -5,7 +5,7 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ 219c88ad-4856-4cd2-9c8e-4e1f8cec9b58
-include("post_tonal_tools_min.jl")
+println(include("post_tonal_tools_min.jl"))
 
 # ╔═╡ 787ad2c6-614b-44a2-8a63-98baf09be8eb
 md"""
@@ -30,16 +30,16 @@ md"""
 
 # ╔═╡ c38c8548-d3ef-445b-af9b-4962699f3129
 """
-	oct_equal(mel_seq)
+	o_equiv(mel_seq)
 
 Reduces MIDI pitches to pitch class integer notation.
 """
-function oct_equal(pcc=[64,62,60,62,52,76,64])
+function o_equiv(pcc=[64,62,60,62,52,76,64])
 	return [i % 12 for i ∈ pcc]
 end
 
 # ╔═╡ 13e1c54a-05e7-46bb-9264-efa88aaa6570
-oct_equal(mel_seq)
+o_equiv(mel_seq)
 
 # ╔═╡ 31118d26-aaba-40df-86a9-fd8652b1db20
 md"""
@@ -48,25 +48,25 @@ md"""
 
 # ╔═╡ 96330bfc-2df7-4e41-984a-40f880471e6c
 """
-	enharm_equal
+	n_equiv
 
 Enharmonic pitch class array.
 """
-enharm_equal = [0 "C" "B#" "Dbb" "oh";
-    1 "C#" "Db" "NA" "one";
-    2 "D" "Cx" "Ebb" "two";
-    3 "Eb" "D#" "NA" "three";
-    4 "E" "Dx" "Fb" "four";
-    5 "F" "E#" "Gbb" "five";
-    6 "F#" "Gb" "NA" "six";
-    7 "G" "Fx" "Abb" "sev";
-    8 "Ab" "G#" "NA" "eight";
-    9 "A" "Gx" "Bb" "nine";
-    10 "Bb" "A#" "NA" "ten";
-    11 "B" "Ax" "Cb" "lev";]
+n_equiv = [0 "Oh" "C" "C" "B#" "Do" "Do" "C" "C";
+    1 "One" "C#" "Db" "Bx" "Di" "Ra" "Cis" "Des";
+    2 "Two" "D" "D" "Cx" "Re" "Re" "D" "D";
+    3 "Three" "D#" "Eb" "D#" "Ri" "Me" "Dis" "Es";
+    4 "Four" "E" "Fb" "Dx" "Mi" "Mi" "E" "E";
+    5 "Five" "F" "F" "E#" "Fa" "Fa" "F" "F";
+    6 "Six" "F#" "Gb" "Ex" "Fi" "Se" "Fis" "Ges";
+    7 "Sev" "G" "G" "Fx" "Sol" "Sol" "G" "G";
+    8 "Eight" "G#" "Ab" "G#" "Si" "Le" "Gis" "As";
+    9 "Nine" "A" "A" "Gx" "La" "La" "A" "A";
+    10 "Ten" "A#" "Bb" "A#" "Li" "Te" "Ais" "B";
+    11 "Lev" "B" "Cb" "Ax" "Ti" "Ti" "H" "H";]
 
-# ╔═╡ cb2c4659-a454-4c37-8863-c9d61026ce72
-enharm_equal
+# ╔═╡ 9d2e515d-85d1-4ccb-9831-6cee4c2ec2c2
+n_equiv
 
 # ╔═╡ becce23b-4d6a-4667-bba5-4c5c4be09789
 """
@@ -75,12 +75,12 @@ enharm_equal
 The *enharmonic(pc)* function finds the enharmonic pitch class from any traditioanl pitch class name (English only, for now) and converts it to an integer pitch class.
 """
 function enharmonic(pc=0)
-	pitch = findall(x -> x==pc, enharm_equal)
-	return enharm_equal[pitch[1][1]]
+	pitch = findall(x -> x==pc, n_equiv)
+	return n_equiv[pitch[1][1]]
 end
 
 # ╔═╡ cd21f6c7-746b-438e-b33c-5573c21e53c7
-enharmonic("E#")
+enharmonic("Fis")
 
 # ╔═╡ b4fbbb13-1f2e-4c21-bcdd-92e7419dbd1b
 md"""
@@ -114,7 +114,7 @@ interval_names = [0 "unison";
 # ╔═╡ 30b19a27-57e4-4199-ae1c-075a13e326f5
 function get_interval_int(interval="perfect unison")
 	interval_name = findall(x -> x==interval, interval_names)
-	return enharm_equal[interval_name[1][1]]
+	return interval_names[interval_name[1][1]]
 end
 
 # ╔═╡ 305c8228-16e6-43ae-ab1e-2ce2221865e0
@@ -228,12 +228,12 @@ md"""
 # ╟─4fb9ddbd-9004-4e60-86c0-76542fe59025
 # ╟─6b45a442-af5d-427a-a5ce-ef2ec0c7fd58
 # ╟─6447854a-e630-4727-81f9-b83695320611
-# ╟─c38c8548-d3ef-445b-af9b-4962699f3129
+# ╠═c38c8548-d3ef-445b-af9b-4962699f3129
 # ╠═13e1c54a-05e7-46bb-9264-efa88aaa6570
 # ╟─31118d26-aaba-40df-86a9-fd8652b1db20
-# ╟─96330bfc-2df7-4e41-984a-40f880471e6c
-# ╟─cb2c4659-a454-4c37-8863-c9d61026ce72
-# ╟─becce23b-4d6a-4667-bba5-4c5c4be09789
+# ╠═96330bfc-2df7-4e41-984a-40f880471e6c
+# ╠═9d2e515d-85d1-4ccb-9831-6cee4c2ec2c2
+# ╠═becce23b-4d6a-4667-bba5-4c5c4be09789
 # ╠═cd21f6c7-746b-438e-b33c-5573c21e53c7
 # ╟─b4fbbb13-1f2e-4c21-bcdd-92e7419dbd1b
 # ╟─45ca83f0-7a2f-42f0-80b5-d6ac6022685b

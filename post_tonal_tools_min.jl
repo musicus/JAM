@@ -26,5 +26,5 @@ function ic(pcc=[0,2,6,8])
 end
 
 function loaded()
-	return nothing
+	println("The post_tonal_tools_min.jl have been successfully loaded! :-)")
 end
