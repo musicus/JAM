@@ -75,12 +75,13 @@ n_equiv
 The *enharmonic(pc)* function finds the enharmonic pitch class from any traditioanl pitch class name (English only, for now) and converts it to an integer pitch class.
 """
 function enharmonic(pc=0)
-	pitch = findall(x -> x==pc, n_equiv)
+	clean_pc = uppercasefirst(pc)
+	pitch = findall(x -> x==clean_pc, n_equiv)
 	return n_equiv[pitch[1][1]]
 end
 
 # ╔═╡ cd21f6c7-746b-438e-b33c-5573c21e53c7
-enharmonic("Fis")
+show(enharmonic(6))
 
 # ╔═╡ b4fbbb13-1f2e-4c21-bcdd-92e7419dbd1b
 md"""
