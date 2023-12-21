@@ -1,0 +1,24 @@
+### A Pluto.jl notebook ###
+# v0.19.27
+
+using Markdown
+using InteractiveUtils
+
+# ╔═╡ 95a13dca-9fb3-11ee-09bb-4b096132db7c
+md"""
+# Table of Contents
+## Chapter 1: Introduction
+## Chapter 2: Pitch Classes and Intervals
+## Chapter 3: Rhythm, Meter, and Time
+## Chapter 4: The Scale Design Pattern
+## Chapter 5: Sets and Chords
+## Chapter 6: Linear and Harmonic Functions
+## Chapter 7: Post-Tonal Tonality
+## Chapter 8: Conclusion
+## Appendix
+## Glossary
+## Bibliography
+"""
+
+# ╔═╡ Cell order:
+# ╟─95a13dca-9fb3-11ee-09bb-4b096132db7c
