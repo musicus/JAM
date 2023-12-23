@@ -6,8 +6,8 @@ using InteractiveUtils
 
 # ╔═╡ b5f719a8-9fb5-11ee-3dca-5f0b950496db
 md"""
-# Chapter 6: Linear and Harmonic Functions
+# Chapter 5: Linear and Harmonic Functions
 """
 
 # ╔═╡ Cell order:
-# ╠═b5f719a8-9fb5-11ee-3dca-5f0b950496db
+# ╟─b5f719a8-9fb5-11ee-3dca-5f0b950496db

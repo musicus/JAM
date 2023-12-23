@@ -9,7 +9,7 @@ include("post_tonal_tools_min.jl")
 
 # ╔═╡ d72ae558-8e8c-11ee-1171-ebca48c5f0fd
 md"""
-# Chapter 3: The Scale Design Pattern
+# Chapter 3: Scales and PC Collections
 """
 
 # ╔═╡ 2ec38d75-301c-400e-9844-4359b87244b7
@@ -104,7 +104,7 @@ ais(mel_seq)
 
 # ╔═╡ Cell order:
 # ╟─d72ae558-8e8c-11ee-1171-ebca48c5f0fd
-# ╟─2ec38d75-301c-400e-9844-4359b87244b7
+# ╠═2ec38d75-301c-400e-9844-4359b87244b7
 # ╟─c7140fe5-45b3-4811-a2fa-0d746436cdea
 # ╟─9c2ffba8-515c-4ae5-a316-eddf787dcb8a
 # ╠═9ec0d7cb-8c45-41b9-9ce3-55524b3712a7

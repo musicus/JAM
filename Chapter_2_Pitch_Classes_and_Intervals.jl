@@ -9,7 +9,7 @@ include("post_tonal_tools_min.jl")
 
 # ╔═╡ 787ad2c6-614b-44a2-8a63-98baf09be8eb
 md"""
-# Chapter 2: Pitch Space and Intervals
+# Chapter 2: Pitch Classes and Intervals
 """
 
 # ╔═╡ e742dd30-3666-403a-82c9-513329cb7ac1

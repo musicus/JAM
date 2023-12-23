@@ -6,7 +6,7 @@ using InteractiveUtils
 
 # ╔═╡ 6680ca0c-9fb7-11ee-0db2-bd03413c1ac6
 md"""
-# Chapter 4: Rhythm, Meter, and Time
+# Chapter 6: Rhythm, Meter, and Time
 """
 
 # ╔═╡ Cell order:

@@ -4,21 +4,26 @@
 using Markdown
 using InteractiveUtils
 
+# ╔═╡ a59c9bf4-38f6-42f2-86cc-ecdb83e791c3
+md"""
+# Music Theory Algorithmic Patterns
+"""
+
 # ╔═╡ 95a13dca-9fb3-11ee-09bb-4b096132db7c
 md"""
-# Table of Contents
-## Chapter 1: Introduction
-## Chapter 2: Pitch Classes and Intervals
-## Chapter 3: Rhythm, Meter, and Time
-## Chapter 4: The Scale Design Pattern
-## Chapter 5: Sets and Chords
-## Chapter 6: Linear and Harmonic Functions
-## Chapter 7: Post-Tonal Tonality
-## Chapter 8: Conclusion
-## Appendix
-## Glossary
-## Bibliography
+## Table of Contents
+### Chapter 1: Introduction
+### Chapter 2: Pitch Classes and Intervals
+### Chapter 3: Scales and Pitch Class Collections
+### Chapter 4: Chords and Sets
+### Chapter 5: Linear and Harmonic Functions
+### Chapter 6: Rhythm, Meter, and Time
+### Chapter 7: Conclusion
+### Appendix
+### Glossary
+### Bibliography
 """
 
 # ╔═╡ Cell order:
-# ╟─95a13dca-9fb3-11ee-09bb-4b096132db7c
+# ╠═a59c9bf4-38f6-42f2-86cc-ecdb83e791c3
+# ╠═95a13dca-9fb3-11ee-09bb-4b096132db7c

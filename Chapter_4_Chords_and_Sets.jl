@@ -6,8 +6,8 @@ using InteractiveUtils
 
 # ╔═╡ aa95b664-9fb5-11ee-1365-35e559daab40
 md"""
-# Chapter 5: Sets and Chords
+# Chapter 4: Chords and Sets
 """
 
 # ╔═╡ Cell order:
-# ╟─aa95b664-9fb5-11ee-1365-35e559daab40
+# ╠═aa95b664-9fb5-11ee-1365-35e559daab40
