@@ -6,7 +6,7 @@ using InteractiveUtils
 
 # ╔═╡ a59c9bf4-38f6-42f2-86cc-ecdb83e791c3
 md"""
-# Music Theory Algorithmic Patterns
+# Algorithmic Music Theory Patterns
 """
 
 # ╔═╡ 95a13dca-9fb3-11ee-09bb-4b096132db7c
@@ -25,5 +25,5 @@ md"""
 """
 
 # ╔═╡ Cell order:
-# ╠═a59c9bf4-38f6-42f2-86cc-ecdb83e791c3
-# ╠═95a13dca-9fb3-11ee-09bb-4b096132db7c
+# ╟─a59c9bf4-38f6-42f2-86cc-ecdb83e791c3
+# ╟─95a13dca-9fb3-11ee-09bb-4b096132db7c
