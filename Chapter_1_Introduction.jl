@@ -11,7 +11,7 @@ md"""
 
 # ╔═╡ 30749254-8d86-491f-9fff-c5bc047aaff3
 md"""
-## Aren't there enough tools already? 
+## Aren't there enough computational music theory tools already? 
 
 No, there will never be enough tools. We can re-use a lot, and we should, but languages, platforms, operating systems, computer systems fall out of favor at an ever rapid pace reflecting the ephemeral experience of our own existence. Once one system has been mastered, a new one will emerge, and another will simply not be supported anymore, even the one that has not been created yet.[^1]
 

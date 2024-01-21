@@ -69,13 +69,13 @@ Applying an AIS does not depend on scale length–whether we are dealing with a 
 
 # ╔═╡ c7140fe5-45b3-4811-a2fa-0d746436cdea
 md"""
-### Coding the Scale Design Pattern
-What we are after is being able to analyze any given scale or melodic pattern by passing the passage to a function that returns the ```AIS```.
+### Coding the Scale Pattern
+What we are after is being able to analyze any given scale or melodic pattern by passing the passage or pitch class sequence to a function that returns the ```AIS```.
 
 """
 
 # ╔═╡ 9ec0d7cb-8c45-41b9-9ce3-55524b3712a7
-mel_seq = [64, 62, 60, 62, 52, 76, 64]
+melody = [64, 62, 60, 62, 52, 76, 64]
 
 # ╔═╡ 44bee630-4740-4d6e-836c-d13414c9bc91
 """
@@ -87,10 +87,10 @@ Create an adjacent interval series (AIS), like the opi function, from a pitch cl
 
 ```jldoctest
 
-julia> show(mel_seq)
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 
-julia> println(ais(mel_seq))
+julia> println(ais(melody))
 [-2, -2, 2, -10, 24, -12]
 
 ```
@@ -100,13 +100,23 @@ function ais(pcc)
 end
 
 # ╔═╡ f4ca900d-7d75-47f2-901d-8e825c5c78e1
-ais(mel_seq)
+ais(melody)
+
+# ╔═╡ 287b4f09-5b6b-4f6c-8e5a-1c454f2411fa
+md"""
+## Common Scales or Pitch Class Collections
+
+### Whole Tone Collection
+The whole tone collection consists of an AIS of six equally spaced PCs in equal temperament. The PCs are equally spaced by a Major second. Olivier Messiaen calls the whole tone collection the _premiere mode_, or first mode of limted transposition, since the resulting pitch class collection results in only two possible transpositions.
+
+"""
 
 # ╔═╡ Cell order:
 # ╟─d72ae558-8e8c-11ee-1171-ebca48c5f0fd
-# ╠═2ec38d75-301c-400e-9844-4359b87244b7
+# ╟─2ec38d75-301c-400e-9844-4359b87244b7
 # ╟─c7140fe5-45b3-4811-a2fa-0d746436cdea
-# ╟─9c2ffba8-515c-4ae5-a316-eddf787dcb8a
+# ╠═9c2ffba8-515c-4ae5-a316-eddf787dcb8a
 # ╠═9ec0d7cb-8c45-41b9-9ce3-55524b3712a7
-# ╠═44bee630-4740-4d6e-836c-d13414c9bc91
+# ╟─44bee630-4740-4d6e-836c-d13414c9bc91
 # ╟─f4ca900d-7d75-47f2-901d-8e825c5c78e1
+# ╠═287b4f09-5b6b-4f6c-8e5a-1c454f2411fa

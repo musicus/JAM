@@ -103,7 +103,7 @@ Using a minimized file (for now) to get the post tonal tools into the Pluto.jl w
 """
 
 # ╔═╡ 4fb9ddbd-9004-4e60-86c0-76542fe59025
-mel_seq = [64, 62, 60, 62, 52, 76, 64]
+melody = [64, 62, 60, 62, 52, 76, 64]
 
 # ╔═╡ 6b45a442-af5d-427a-a5ce-ef2ec0c7fd58
 fr_Aug6 = [0, 2, 6, 8]
@@ -262,7 +262,7 @@ The AIS is identical to the OPI.
 ais(fr_Aug6)
 
 # ╔═╡ 7c973326-b13d-4348-97f0-40e7a3ea868a
-ais(mel_seq)
+ais(melody)
 
 # ╔═╡ 4af2ee60-1f7d-4ae1-b3a6-62839d6d42a2
 md"""
@@ -333,7 +333,7 @@ ic(mel_seq)
 #"""
 
 # ╔═╡ Cell order:
-# ╠═787ad2c6-614b-44a2-8a63-98baf09be8eb
+# ╟─787ad2c6-614b-44a2-8a63-98baf09be8eb
 # ╟─e742dd30-3666-403a-82c9-513329cb7ac1
 # ╟─04d840f9-6d5e-4212-b32d-e920cf89d6a3
 # ╟─e009f034-649a-4352-b92b-355f63e19d37
@@ -341,7 +341,7 @@ ic(mel_seq)
 # ╟─4fb9ddbd-9004-4e60-86c0-76542fe59025
 # ╟─6b45a442-af5d-427a-a5ce-ef2ec0c7fd58
 # ╟─31118d26-aaba-40df-86a9-fd8652b1db20
-# ╠═f5cc3b93-690f-4cef-81c3-40bdd602845b
+# ╟─f5cc3b93-690f-4cef-81c3-40bdd602845b
 # ╟─96330bfc-2df7-4e41-984a-40f880471e6c
 # ╠═9d2e515d-85d1-4ccb-9831-6cee4c2ec2c2
 # ╟─becce23b-4d6a-4667-bba5-4c5c4be09789
@@ -351,7 +351,7 @@ ic(mel_seq)
 # ╠═0febd801-151d-445b-af2d-9fcd00d845c2
 # ╠═213af447-f991-49ab-abd6-66efbe0c62cb
 # ╟─6447854a-e630-4727-81f9-b83695320611
-# ╠═c38c8548-d3ef-445b-af9b-4962699f3129
+# ╟─c38c8548-d3ef-445b-af9b-4962699f3129
 # ╠═13e1c54a-05e7-46bb-9264-efa88aaa6570
 # ╟─b4fbbb13-1f2e-4c21-bcdd-92e7419dbd1b
 # ╟─5cd79804-f8b4-44c0-8ae8-d01f24505f79
@@ -361,7 +361,7 @@ ic(mel_seq)
 # ╟─9ab96316-08ad-475d-a769-9c175391ab8b
 # ╠═b32deaac-2b76-4fd8-893c-31ce15bd72b5
 # ╠═71ff8f0f-89e8-47f9-b610-3b8776336edb
-# ╠═29f1ffd5-556e-44f0-97c9-49db5185d9a2
+# ╟─29f1ffd5-556e-44f0-97c9-49db5185d9a2
 # ╠═8a9de060-d05c-406c-891c-576e9c4a958f
 # ╠═7c973326-b13d-4348-97f0-40e7a3ea868a
 # ╟─4af2ee60-1f7d-4ae1-b3a6-62839d6d42a2

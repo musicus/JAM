@@ -9,6 +9,11 @@ md"""
 # Algorithmic Music Theory Patterns
 """
 
+# ╔═╡ bd8d735e-d552-46cf-aec5-ddbd37559af2
+md"""
+### Reiner Krämer
+"""
+
 # ╔═╡ 95a13dca-9fb3-11ee-09bb-4b096132db7c
 md"""
 ## Table of Contents
@@ -26,4 +31,5 @@ md"""
 
 # ╔═╡ Cell order:
 # ╟─a59c9bf4-38f6-42f2-86cc-ecdb83e791c3
+# ╟─bd8d735e-d552-46cf-aec5-ddbd37559af2
 # ╟─95a13dca-9fb3-11ee-09bb-4b096132db7c

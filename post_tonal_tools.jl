@@ -6,7 +6,7 @@
 # ======= 
 
 # Test Pitch Class Collections
-mel_seq = [64, 62, 60, 62, 52, 76, 64]
+melody = [64, 62, 60, 62, 52, 76, 64]
 fr_Aug6 = [0, 2, 6, 8]
 
 """
@@ -18,7 +18,7 @@ Converts midi pitch integers to pitch class integers, as a single pitch or pitch
 
 ```jldoctest
 
-julia> mel_seq = [64, 62, 60, 62, 52, 76, 64]
+julia> melody = [64, 62, 60, 62, 52, 76, 64]
 7-element Vector{Int64}:
  64
  62
@@ -29,7 +29,7 @@ julia> mel_seq = [64, 62, 60, 62, 52, 76, 64]
  64
 
 # Running the midi_to_pc function and printing its results.
-julia> println(midi_to_pc(mel_seq))
+julia> println(midi_to_pc(melody))
 [4, 2, 0, 2, 4, 4, 4]
 
 ```
@@ -53,11 +53,11 @@ The OPI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Musi
 
 ```jldoctest
 
-# Double checking whether there is a mel_seq, if not mel_seq has to be defined.
-julia> show(mel_seq)
+# Double checking whether there is a melody, if not melody has to be defined.
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 
-julia> println(opi(mel_seq))
+julia> println(opi(melody))
 [-2, -2, 2, -10, 24, -12]
 
 ``` 
@@ -76,10 +76,10 @@ The AIS definition comes from Joseph N. Straus' "Introduction to Post-Tonal Musi
 
 ```jldoctest
 
-julia> show(mel_seq)
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 
-julia> println(ais(mel_seq))
+julia> println(ais(melody))
 [-2, -2, 2, -10, 24, -12]
 
 ```
@@ -101,10 +101,10 @@ The UPI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Musi
 
 ```jldoctest
 
-julia> show(mel_seq)
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 
-julia> println(upi(mel_seq))
+julia> println(upi(melody))
 [2, 2, 2, 10, 24, 12]
 
 ```
@@ -126,10 +126,10 @@ The OPCI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Mus
 
 ```jldoctest
 
-julia> show(mel_seq)
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 
-julia> println(opci(mel_seq))
+julia> println(opci(melody))
 [10, 10, 2, 2, 0, 0]
 
 ```
@@ -149,10 +149,10 @@ The OPCI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Mus
 # Examples
 ```jldoctest
 
-julia> show(mel_seq)
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 
-julia> println(upci(mel_seq))
+julia> println(upci(melody))
 [2, 2, 2, 2, 0, 0]
 
 ```
@@ -173,10 +173,10 @@ The OPCI definition comes from Joseph N. Straus' "Introduction to Post-Tonal Mus
 # Examples
 ```jldoctest
 	
-julia> show(mel_seq)
+julia> show(melody)
 [64, 62, 60, 62, 52, 76, 64]
 	
-julia> println(ic(mel_seq))
+julia> println(ic(melody))
 [2, 2, 2, 2, 0, 0]
 	
 ```
